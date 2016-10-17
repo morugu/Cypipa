@@ -1,0 +1,10 @@
+framework module Cypipa {
+  umbrella header "Cypipa.h"
+
+  export *
+  module * { export * }
+}
+
+module Cypipa.Swift {
+    header "Cypipa-Swift.h"
+}
