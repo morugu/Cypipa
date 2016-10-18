@@ -13,9 +13,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Cypipa.getPublicIP { (ipAddress) in
-            
-        }
+//        Cypipa.getPublicIP { (ipAddress) in
+//            print(ipAddress)
+//        }
+        
+        let task = Cypipa.getPublicIP()
+        print(task)
     }
 
     override func didReceiveMemoryWarning() {
