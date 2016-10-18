@@ -12,31 +12,31 @@ public class Cypipa {
     
     static let CheckIPAddressURL: String = "https://httpbin.org/ip"
     
-    public func getPublicIP() -> String {
-        print("getPublicIP")
-        return ""
+    public static func getPublicIP() -> URLSessionDataTask {
+        let request = generateURLRequest()
+        let session = generateURLSession()
+        
+        let task = session.dataTask(with: request)
+        // TODO: develop sync request
+
+        return task
     }
    
-    public static func getPublicIP(callback:(_ publicIP: String) -> Void) {
-        callback("getPublicIP: async")
+    public static func getPublicIP(callback:@escaping (_ publicIP: String) -> Void) {
         
-        let url = URL(string: Cypipa.CheckIPAddressURL)
-        let urlRequest = URLRequest(url: url!)
-        let sessionConfig = URLSessionConfiguration.default
-        let session = URLSession(configuration: sessionConfig)
-        
-        let task = session.dataTask(with: urlRequest) {
+        let request = generateURLRequest()
+        let session = generateURLSession()
+        let task = session.dataTask(with: request) {
             (data, response, error) in
-            guard error == nil else {
-                print("error calling GET on /todos/1")
+            if error != nil {
+                callback("")
                 return
             }
             
             var json = parseJSON(inputData: data!)
-            print(json["origin"]!)
-            
             if json["origin"] != nil {
-
+                let ipAddress = json["origin"]
+                callback(ipAddress!)
             }
         }
         task.resume()
@@ -53,9 +53,20 @@ public class Cypipa {
         return false
     }
     
+    static func generateURLRequest() -> URLRequest {
+        let url = URL(string: Cypipa.CheckIPAddressURL)
+        let urlRequest = URLRequest(url: url!)
+        return urlRequest
+    }
+    
+    static func generateURLSession() -> URLSession {
+        let sessionConfig = URLSessionConfiguration.default
+        let urlSession = URLSession(configuration: sessionConfig)
+        return urlSession
+    }
+    
     static func parseJSON(inputData: Data) -> [String:String] {
         let json = try! JSONSerialization.jsonObject(with: inputData, options: JSONSerialization.ReadingOptions.mutableContainers)
-
         return json as! Dictionary
     }
 }
