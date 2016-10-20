@@ -12,8 +12,8 @@
 		C64BC7561DB501CE0075740B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64BC7541DB501CE0075740B /* Main.storyboard */; };
 		C64BC7581DB501CE0075740B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64BC7571DB501CE0075740B /* Assets.xcassets */; };
 		C64BC75B1DB501CE0075740B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64BC7591DB501CE0075740B /* LaunchScreen.storyboard */; };
-		C64BC7741DB5136B0075740B /* Cypipa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64BC7731DB5136B0075740B /* Cypipa.framework */; };
-		C64BC7751DB5136B0075740B /* Cypipa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C64BC7731DB5136B0075740B /* Cypipa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C6956F301DB8FF1F00110270 /* Cypipa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6956F2F1DB8FF1F00110270 /* Cypipa.framework */; };
+		C6956F311DB8FF1F00110270 /* Cypipa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6956F2F1DB8FF1F00110270 /* Cypipa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C64BC7751DB5136B0075740B /* Cypipa.framework in Embed Frameworks */,
+				C6956F311DB8FF1F00110270 /* Cypipa.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +38,7 @@
 		C64BC7571DB501CE0075740B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C64BC75A1DB501CE0075740B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C64BC75C1DB501CE0075740B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C64BC7731DB5136B0075740B /* Cypipa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cypipa.framework; sourceTree = "<group>"; };
+		C6956F2F1DB8FF1F00110270 /* Cypipa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cypipa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C64BC7741DB5136B0075740B /* Cypipa.framework in Frameworks */,
+				C6956F301DB8FF1F00110270 /* Cypipa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +56,7 @@
 		C64BC7441DB501CE0075740B = {
 			isa = PBXGroup;
 			children = (
-				C64BC7731DB5136B0075740B /* Cypipa.framework */,
+				C6956F2F1DB8FF1F00110270 /* Cypipa.framework */,
 				C64BC74F1DB501CE0075740B /* CypipaDemo */,
 				C64BC74E1DB501CE0075740B /* Products */,
 			);
@@ -325,6 +325,7 @@
 				C64BC7611DB501CE0075740B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
