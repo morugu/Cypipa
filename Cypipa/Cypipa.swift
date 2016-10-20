@@ -12,18 +12,6 @@ public class Cypipa {
     
     static let CheckIPAddressURL: String = "https://httpbin.org/ip"
     
-    /**  */
-    public static func getPublicIP() -> URLSessionDataTask {
-        let request = generateURLRequest()
-        let session = generateURLSession()
-        
-        let task = session.dataTask(with: request)
-        // TODO: develop sync request
-
-        return task
-    }
-    
-    /**  */
     public static func getPublicIP(callback:@escaping (_ publicIP: String) -> Void) {
         
         let request = generateURLRequest()
@@ -44,8 +32,7 @@ public class Cypipa {
         task.resume()
     }
     
-    /**  */
-    public static func check(checkTargetIPAdressList: [String], callback:@escaping (_ exsit: Bool) -> Void) {
+    public static func containsPublicIP(checkTargetIPAdressList: [String], callback:@escaping (_ exsit: Bool) -> Void) {
         getPublicIP { (publicIP) in
             for IPAddress in checkTargetIPAdressList {
                 if IPAddress == publicIP {
@@ -55,12 +42,6 @@ public class Cypipa {
             }
             callback(false)
         }
-    }
-    
-    /**  */
-    public static func check() -> Bool {
-        print("check")
-        return false
     }
     
     static func generateURLRequest() -> URLRequest {
