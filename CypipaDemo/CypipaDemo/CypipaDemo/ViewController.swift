@@ -13,12 +13,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        Cypipa.getPublicIP { (ipAddress) in
-//            print(ipAddress)
-//        }
+        Cypipa.getPublicIP { (ipAddress) in
+            print("Your public IP Address: " + ipAddress)
+        }
         
-        let task = Cypipa.getPublicIP()
-        print(task)
+        Cypipa.containsPublicIP(checkTargetIPAdressList: ["127.0.0.1", "192.128.1.213"]) { (exist) in
+            if exist {
+                print("exist")
+            } else {
+                print("not exist")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
