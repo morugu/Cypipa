@@ -11,10 +11,12 @@ import Cypipa
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var publicIPLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Cypipa.getPublicIP { (ipAddress) in
-            print("Your public IP Address: " + ipAddress)
+            self.publicIPLabel.text = ipAddress
         }
         
         Cypipa.containsPublicIP(checkTargetIPAdressList: ["127.0.0.1", "192.128.1.213"]) { (exist) in
