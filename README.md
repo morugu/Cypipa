@@ -8,6 +8,15 @@ Check your public IP address library written in Swift.
 
 # Installation
 
+## Carthage
+```
+github "morugu/Cypipa"
+```
+
+```
+carthage update
+```
+
 # Usage
 
 # Feature
