@@ -35,3 +35,6 @@ Cypipa.getPublicIP { (ipAddress) in
 ```
 
 # Feature
+- [x] Asynchronous method
+- [ ] Synchronous　method
+- [ ] Select access point option
