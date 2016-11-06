@@ -17,8 +17,19 @@ github "morugu/Cypipa"
 carthage update
 ```
 
+## CocoaPods
+```
+pod 'Cypipa'
+```
+```
+pod install
+```
+
 # Usage
+```
+Cypipa.getPublicIP { (ipAddress) in
+
+}
+```
 
 # Feature
-
-# Todo
