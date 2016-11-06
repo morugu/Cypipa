@@ -9,10 +9,12 @@ Check your public IP address library written in Swift.
 # Installation
 
 ## Carthage
+Add your `Cartfile`
 ```
 github "morugu/Cypipa"
 ```
 
+Run following command
 ```
 carthage update
 ```
