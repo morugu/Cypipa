@@ -19,14 +19,6 @@ Run following command
 carthage update
 ```
 
-## CocoaPods
-```
-pod 'Cypipa'
-```
-```
-pod install
-```
-
 # Usage
 ```
 Cypipa.getPublicIP { (ipAddress) in
